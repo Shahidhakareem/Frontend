@@ -1,6 +1,5 @@
 const BASE_URL =
-  import.meta.env.VITE_BACKEND_URL ||
-  "http://localhost:3001"; // fallback for local dev
+  import.meta.env.VITE_BACKEND_URL || "http://localhost:3001"; // local fallback
 
 const urls = {
   baseURL: BASE_URL,
@@ -12,3 +11,4 @@ const urls = {
 };
 
 export default urls;
+
