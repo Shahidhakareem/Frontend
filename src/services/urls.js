@@ -1,15 +1,14 @@
-const BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3001";
+const BASE_URL =
+  import.meta.env.VITE_BACKEND_URL ||
+  "http://localhost:3001"; // fallback for local dev
 
 const urls = {
-  baseURL: {
-    dev: "http://localhost:3001",
-    prod: BASE_URL, // use environment variable in deployment
-  },
+  baseURL: BASE_URL,
   signUp: "/user/signup",
   login: "/user/login",
   courseList: "/courses",
   addCourse: "/courses/addcourse",
-  addFreeCourse: "/courses/addfreecourse"
+  addFreeCourse: "/courses/addfreecourse",
 };
 
 export default urls;
