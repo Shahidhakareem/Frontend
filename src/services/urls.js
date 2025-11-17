@@ -1,8 +1,11 @@
-const BASE_URL =
-  import.meta.env.VITE_BACKEND_URL || "http://localhost:3001"; // local fallback
+const BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3001";
 
 const urls = {
-  baseURL: BASE_URL,
+  baseURL: {
+    dev: "http://localhost:3001",
+    prod: "https://your-backend-service.onrender.com", // Render backend URL
+    
+  },
   signUp: "/user/signup",
   login: "/user/login",
   courseList: "/courses",
@@ -11,4 +14,3 @@ const urls = {
 };
 
 export default urls;
-
