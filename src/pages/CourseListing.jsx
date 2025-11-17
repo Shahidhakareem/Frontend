@@ -40,14 +40,11 @@ const CourseListing = () => {
           return;
         }
 
-        const response = await axios.get(
-          `${urls.baseURL.dev}${urls.courseList}`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+         const BASE_URL = import.meta.env.VITE_BACKEND_URL || urls.baseURL.dev;
+
+        const response = await axios.get(`${BASE_URL}${urls.courseList}`, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
 
         setCourses(response.data.courses || []);
       } catch (err) {
