@@ -73,7 +73,7 @@ const CourseListing = () => {
 
       {/* 🔹 Courses List */}
 
-      <PremiumCourses />
+     <PremiumCourses courses={courses} userRole={userRole} />
 
       {/* 🔹 Empty State */}
       {courses.length === 0 && !loading && (
